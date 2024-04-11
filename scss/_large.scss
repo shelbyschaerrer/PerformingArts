@@ -1,0 +1,22 @@
+header {
+    margin: 0 2rem;
+    max-width: 60rem;
+}
+
+h1 {
+    margin-left: 2rem;
+}
+
+#navWrapper {
+    background-color: $primaryColor;
+}
+
+nav ul li a {
+    padding: .7 rem 2rem;
+    font-size: .8rem;
+}
+
+//main
+section {
+    grid-template-columns: 1fr 1fr 1fr;
+  }

@@ -1,0 +1,42 @@
+header {
+    padding: 1rem $gutter;
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+//main
+section {
+    grid-template-columns: 1fr 1fr;
+  }
+
+#navWrapper {
+    background-color: $primaryColor;
+}
+
+header {
+    margin-left: 2rem;
+}
+
+nav {
+    ul {
+        display: flex;
+    }
+    ul li a {
+        border: none;
+        background-color: $primaryColor;
+        color: black;
+    }
+    ul li a:hover {
+        color: $secondaryColor;
+    }
+    ul li.active a:hover {
+        background-color: black;
+        color: white;
+    }
+    ul li.active a {
+        border-radius: 10px 10px 0 0;
+        background-color: black;
+        color: white;
+    }
+}

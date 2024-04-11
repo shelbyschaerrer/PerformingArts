@@ -1,0 +1,130 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    height: 100%;
+  }
+  
+  /*---- apply a natural box layout model to all elements -------*/
+  * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  //main
+  section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,500px));
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    margin: 2rem 1rem;
+  }
+
+  section div {
+    width: 100%;
+    padding: .5rem;
+    border-radius: 10px;
+    background-color: $secondaryColor;
+    color: white;
+    img {
+        width: 100%;
+        height: auto;
+    }
+    h2 {
+        text-align: center;
+    }
+  }
+
+body {
+    height: 100%;
+    font-family: $defaultFont;
+    font-weight: $normalWeight;
+    color: $fontColor;
+    background-color: #000000;
+}
+
+h1 {
+    margin: 2rem;
+    color: white;
+}
+
+#headerWrapper {
+    background-color: $primaryColor;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 1rem $gutter;
+    gap: 20px;
+    width: 100%;
+    margin-left: .5rem;
+    width: 100%;
+    .headerText {
+        display: flex;
+        flex-direction: column;
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: $boldWeight;
+            color: black;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+            padding-top: 5px;
+        }
+    }
+}
+
+//nav
+
+nav {
+    ul {
+        padding-left: 0;
+        margin: 0;
+    }
+    
+    ul li a {
+        color: white;
+        background-color: black;
+        text-decoration: none;
+        display: block;
+        padding: 1rem 2vw;
+        border-bottom: solid 1px white;
+        margin-left: 0;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    ul li a:hover {
+        background-color: $primaryColor;
+        color: black;
+    } // why are we hovering on a phone???
+
+    ul li.active a {
+        background-color: $secondaryColor;
+    }
+}
+
+// begin the footer
+
+#footerWrapper {
+    background-color: #000000;
+}
+
+footer {
+    padding: .5rem $gutter;
+    p {
+        margin: 0;
+        font-weight: $lightWeight;
+        text-align: center;
+        color: white;
+    }
+}
+
